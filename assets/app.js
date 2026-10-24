@@ -22,7 +22,7 @@
   var DONAR = [
     {nombre:"Mercado Pago", url:"https://link.mercadopago.com.mx/richyloleado"},
     {nombre:"PayPal",       url:"https://www.paypal.com/paypalme/richyloleado"},
-    {nombre:"Ko-fi",        url:""}
+    {nombre:"Ko-fi",        url:"https://ko-fi.com/richyloleado"}
   ];
 
   // ===== Temporadas: mes (1-12) → calculadora destacada en la portada =====
