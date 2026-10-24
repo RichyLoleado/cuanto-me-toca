@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Cuando tengas dominio propio, agrega aquí la línea del sitemap, por ejemplo:
-# Sitemap: https://tudominio.mx/sitemap.xml
+Sitemap: https://cuantometoca-mx.vercel.app/sitemap.xml
