@@ -21,7 +21,7 @@
   // Pega tus enlaces. Los que se queden vacíos no aparecen; si todos están vacíos, no se muestra el cuadro.
   var DONAR = [
     {nombre:"Mercado Pago", url:""},
-    {nombre:"PayPal",       url:""},
+    {nombre:"PayPal",       url:"https://www.paypal.com/paypalme/richyloleado"},
     {nombre:"Ko-fi",        url:""}
   ];
 
