@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Calculadora de aguinaldo 2026 con ISR</title>
+<meta name="description" content="Calcula tu aguinaldo 2026 y el ISR que te retienen. Incluye aguinaldo proporcional si no trabajaste todo el año.">
+<meta property="og:title" content="Calculadora de aguinaldo 2026 con ISR">
+<meta property="og:description" content="Calcula tu aguinaldo 2026 y el ISR que te retienen. Incluye aguinaldo proporcional si no trabajaste todo el año.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_MX">
+<meta name="theme-color" content="#0E6B55">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/estilos.css">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<!-- Aquí se pega el código de Google AdSense cuando aprueben la cuenta -->
+<script src="/assets/app.js" defer></script>
+</head>
+<body data-calc="aguinaldo">
+<header class="top"><div class="wrap">
+  <a class="brand" href="/">¿Cuánto me toca<span>?</span></a>
+  <nav aria-label="Calculadoras">
+    <a href="/aguinaldo/" aria-current="page">Aguinaldo</a>
+    <a href="/sueldo-neto/">Sueldo neto</a>
+    <a href="/finiquito/">Finiquito</a>
+  </nav>
+</div></header>
+<main>
+  <section class="hero"><div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Calculadora de aguinaldo 2026</div>
+      <h1>¿Cuánto te toca de aguinaldo?</h1>
+      <p class="lead">Pon tu sueldo y te decimos cuánto recibes ya con el ISR descontado. Por ley se paga antes del 20 de diciembre.</p>
+      <div class="count" id="count" hidden><b id="countN"></b><span id="countT"></span></div>
+      <form id="f-aguinaldo" hidden>
+        <div class="field">
+          <label for="ag-sueldo">Sueldo mensual bruto</label>
+          <div class="inp"><i>$</i><input id="ag-sueldo" type="number" inputmode="decimal" min="0" step="100" value="15000"></div>
+          <small>Lo que dice tu contrato, antes de impuestos.</small>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label for="ag-dias">Días de aguinaldo</label>
+            <div class="inp"><input id="ag-dias" type="number" inputmode="numeric" min="15" step="1" value="15"></div>
+            <small>La ley da mínimo 15.</small>
+          </div>
+          <div class="field">
+            <label for="ag-trab">Días trabajados en el año</label>
+            <div class="inp"><input id="ag-trab" type="number" inputmode="numeric" min="1" max="365" step="1" value="365"></div>
+            <small>365 si estuviste todo el año.</small>
+          </div>
+        </div>
+      </form>
+      
+    </div>
+    <aside>
+      <div class="slip" id="slip" aria-live="polite"></div>
+    </aside>
+  </div></section>
+  <section class="texto"><div class="wrap">
+    <h2>Preguntas frecuentes sobre el aguinaldo</h2>
+    <div class="faq">
+    <details><summary>¿Cuándo se paga el aguinaldo?</summary><p>La Ley Federal del Trabajo (artículo 87) obliga a pagarlo antes del 20 de diciembre. Muchas empresas lo pagan en la primera quincena de diciembre.</p></details>
+    <details><summary>¿Cuántos días de aguinaldo me tocan?</summary><p>El mínimo legal son 15 días de salario. Tu empresa puede darte más si así lo dice tu contrato o el contrato colectivo; pon esos días en la calculadora.</p></details>
+    <details><summary>¿Me toca aguinaldo si no trabajé todo el año?</summary><p>Sí. Si entraste a mitad de año o dejaste de trabajar antes de diciembre, te toca la parte proporcional a los días que trabajaste. Escribe esos días en el campo de días trabajados.</p></details>
+    <details><summary>¿Cuánto del aguinaldo paga ISR?</summary><p>El aguinaldo está exento de ISR hasta 30 veces la UMA diaria. En 2026 eso equivale a $3,519.30. Solo lo que pasa de esa cantidad paga impuesto.</p></details>
+    <details><summary>¿Por qué hay dos formas de calcular el ISR del aguinaldo?</summary><p>La empresa puede usar el método del artículo 96 de la Ley del ISR o el del artículo 174 de su Reglamento. El segundo suele retener menos; la calculadora usa ese y te muestra cuánto sería con el otro.</p></details>
+    <details><summary>¿Qué hago si no me pagan el aguinaldo?</summary><p>Pide primero a tu empresa que lo pague. Si no lo hace, la Procuraduría Federal de la Defensa del Trabajo (PROFEDET) da asesoría gratuita para reclamarlo.</p></details>
+    </div>
+  </div></section>
+  <section class="more"><div class="wrap">
+    <h2>Otras calculadoras</h2>
+    <p>Cada calculadora usa las tablas oficiales de 2026.</p>
+    <div class="cards">
+      <a class="card" href="/sueldo-neto/" data-card="sueldo">
+        <span class="chips"><span class="chip">Todo el año</span></span>
+        <b>Sueldo neto</b>
+        <small>De bruto a neto, por mes y por quincena.</small>
+      </a>
+      <a class="card" href="/finiquito/" data-card="finiquito">
+        <span class="chips"><span class="chip">Todo el año</span></span>
+        <b>Finiquito y liquidación</b>
+        <small>Lo que te deben si renuncias o te despiden.</small>
+      </a>
+    </div>
+  </div></section>
+</main>
+<footer class="pie"><div class="wrap">
+  <nav aria-label="Sitio">
+    <a href="/aguinaldo/">Calculadora de aguinaldo</a>
+    <a href="/sueldo-neto/">Calculadora de sueldo neto</a>
+    <a href="/finiquito/">Calculadora de finiquito</a>
+    <a href="/acerca/">Acerca de</a>
+    <a href="/privacidad/">Aviso de privacidad</a>
+  </nav>
+  <p>Cálculos con las tablas de ISR, UMA, subsidio para el empleo y salarios mínimos de 2026. Son estimaciones informativas y no sustituyen la asesoría de un contador o abogado laboral. Todo se calcula en tu navegador: no guardamos lo que escribes.</p>
+</div></footer>
+</body>
+</html>

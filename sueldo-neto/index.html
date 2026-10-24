@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Calculadora de sueldo neto 2026: de bruto a neto</title>
+<meta name="description" content="Calcula tu sueldo neto 2026: cuánto te descuentan de ISR e IMSS y cuánto te llega por quincena.">
+<meta property="og:title" content="Calculadora de sueldo neto 2026: de bruto a neto">
+<meta property="og:description" content="Calcula tu sueldo neto 2026: cuánto te descuentan de ISR e IMSS y cuánto te llega por quincena.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_MX">
+<meta name="theme-color" content="#0E6B55">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/estilos.css">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<!-- Aquí se pega el código de Google AdSense cuando aprueben la cuenta -->
+<script src="/assets/app.js" defer></script>
+</head>
+<body data-calc="sueldo">
+<header class="top"><div class="wrap">
+  <a class="brand" href="/">¿Cuánto me toca<span>?</span></a>
+  <nav aria-label="Calculadoras">
+    <a href="/aguinaldo/">Aguinaldo</a>
+    <a href="/sueldo-neto/" aria-current="page">Sueldo neto</a>
+    <a href="/finiquito/">Finiquito</a>
+  </nav>
+</div></header>
+<main>
+  <section class="hero"><div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Calculadora de sueldo neto 2026</div>
+      <h1>¿Cuánto te llega de tu sueldo?</h1>
+      <p class="lead">De bruto a neto: lo que te quitan de ISR y de IMSS, y lo que de verdad cae en tu cuenta cada quincena.</p>
+      <div class="count" id="count" hidden><b id="countN"></b><span id="countT"></span></div>
+      <form id="f-sueldo" hidden>
+        <div class="field">
+          <label for="sn-sueldo">Sueldo mensual bruto</label>
+          <div class="inp"><i>$</i><input id="sn-sueldo" type="number" inputmode="decimal" min="0" step="100" value="15000"></div>
+          <small>Antes de impuestos y descuentos.</small>
+        </div>
+        <div class="field">
+          <label for="sn-zona">Zona</label>
+          <div class="inp"><select id="sn-zona">
+            <option value="general">Resto del país</option>
+            <option value="frontera">Zona Libre de la Frontera Norte</option>
+          </select></div>
+          <small>Solo cambia el salario mínimo que se usa de referencia.</small>
+        </div>
+      </form>
+      
+    </div>
+    <aside>
+      <div class="slip" id="slip" aria-live="polite"></div>
+    </aside>
+  </div></section>
+  <section class="texto"><div class="wrap">
+    <h2>Preguntas frecuentes sobre el sueldo neto</h2>
+    <div class="faq">
+    <details><summary>¿Qué diferencia hay entre sueldo bruto y sueldo neto?</summary><p>El sueldo bruto es lo que acordaste con tu empresa. El neto es lo que te depositan después de restar los impuestos y las cuotas de seguridad social.</p></details>
+    <details><summary>¿Qué descuentos son obligatorios?</summary><p>El ISR (impuesto sobre la renta) y tu parte de las cuotas del IMSS. Otros descuentos, como Infonavit, Fonacot o caja de ahorro, dependen de cada persona y no se incluyen aquí.</p></details>
+    <details><summary>¿Qué es el subsidio para el empleo?</summary><p>Es un apoyo que reduce el ISR de quienes ganan menos. En 2026 puede bajar tu ISR hasta $535.65 al mes si tu sueldo mensual es de $11,492.66 o menos.</p></details>
+    <details><summary>¿Por qué no me descuentan nada si gano el salario mínimo?</summary><p>Quien gana el salario mínimo no paga ISR, y su cuota del IMSS la cubre el patrón. En 2026 el mínimo es de $315.04 diarios, o $440.87 en la Zona Libre de la Frontera Norte.</p></details>
+    <details><summary>¿Cómo calculo mi sueldo por quincena?</summary><p>Divide tu sueldo neto mensual entre dos. La calculadora ya te muestra esa cifra debajo del total.</p></details>
+    </div>
+  </div></section>
+  <section class="more"><div class="wrap">
+    <h2>Otras calculadoras</h2>
+    <p>Cada calculadora usa las tablas oficiales de 2026.</p>
+    <div class="cards">
+      <a class="card" href="/aguinaldo/" data-card="aguinaldo">
+        <span class="chips"><span class="chip">Octubre a diciembre</span></span>
+        <b>Aguinaldo</b>
+        <small>Cuánto te toca y cuánto ISR te retienen.</small>
+      </a>
+      <a class="card" href="/finiquito/" data-card="finiquito">
+        <span class="chips"><span class="chip">Todo el año</span></span>
+        <b>Finiquito y liquidación</b>
+        <small>Lo que te deben si renuncias o te despiden.</small>
+      </a>
+    </div>
+  </div></section>
+</main>
+<footer class="pie"><div class="wrap">
+  <nav aria-label="Sitio">
+    <a href="/aguinaldo/">Calculadora de aguinaldo</a>
+    <a href="/sueldo-neto/">Calculadora de sueldo neto</a>
+    <a href="/finiquito/">Calculadora de finiquito</a>
+    <a href="/acerca/">Acerca de</a>
+    <a href="/privacidad/">Aviso de privacidad</a>
+  </nav>
+  <p>Cálculos con las tablas de ISR, UMA, subsidio para el empleo y salarios mínimos de 2026. Son estimaciones informativas y no sustituyen la asesoría de un contador o abogado laboral. Todo se calcula en tu navegador: no guardamos lo que escribes.</p>
+</div></footer>
+</body>
+</html>
