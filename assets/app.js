@@ -18,9 +18,12 @@
   var IMSS_EXC = 0.004;                               // Enfermedad y maternidad, excedente de 3 UMA
 
   // ===== Donaciones =====
-  // Pega aquí tu enlace de Mercado Pago, PayPal.me, Ko-fi o Buy Me a Coffee.
-  // Mientras esté vacío, el botón no aparece.
-  var DONAR_URL = "";
+  // Pega tus enlaces. Los que se queden vacíos no aparecen; si todos están vacíos, no se muestra el cuadro.
+  var DONAR = [
+    {nombre:"Mercado Pago", url:""},
+    {nombre:"PayPal",       url:""},
+    {nombre:"Ko-fi",        url:""}
+  ];
 
   // ===== Temporadas: mes (1-12) → calculadora destacada en la portada =====
   // Abril (declaración anual) y mayo-junio (PTU) usan sueldo neto hasta que existan esas calculadoras.
@@ -230,12 +233,18 @@
       var h = new Date(), p = function(n){ return (n < 10 ? "0" : "") + n; };
       salida.value = h.getFullYear() + "-" + p(h.getMonth() + 1) + "-" + p(h.getDate());
     }
-    if (DONAR_URL && /^https:\/\//.test(DONAR_URL)){
+    var donar = DONAR.filter(function(d){ return /^https:\/\//.test(d.url); });
+    if (donar.length){
       var cafe = document.createElement("div");
       cafe.className = "cafe";
-      cafe.innerHTML = '<p><b>¿Te sirvió?</b> Esta calculadora es gratis y la mantiene un estudiante. Si quieres apoyar, invítame un café.</p>' +
-        '<a class="cafe-btn" target="_blank" rel="noopener">☕ Invítame un café</a>';
-      cafe.querySelector("a").href = DONAR_URL;
+      cafe.innerHTML = '<p><b>¿Te sirvió?</b> Esta calculadora es gratis y la mantiene un estudiante. Si quieres apoyar, invítame un café ☕</p><div class="cafe-btns"></div>';
+      var btns = cafe.querySelector(".cafe-btns");
+      donar.forEach(function(d){
+        var a = document.createElement("a");
+        a.className = "cafe-btn"; a.target = "_blank"; a.rel = "noopener";
+        a.href = d.url; a.textContent = d.nombre;
+        btns.appendChild(a);
+      });
       el("slip").insertAdjacentElement("afterend", cafe);
     }
     var pintar = function(){ el("slip").innerHTML = SLIPS[clave](); };
