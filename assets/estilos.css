@@ -75,6 +75,12 @@ form{margin-top:26px;display:grid;gap:14px;max-width:460px}
 .sub em{font-style:normal;font-family:var(--f-mono)}
 .foot{font-size:12px;color:var(--muted);margin:14px 0 0}
 
+/* Donación */
+.cafe{margin-top:14px;display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;background:var(--flor-soft);color:var(--flor-ink);border-radius:12px;padding:14px 16px}
+.cafe p{margin:0;font-size:14px;flex:1 1 220px}
+.cafe-btn{display:inline-flex;align-items:center;gap:6px;background:var(--flor);color:#1E1402;font-weight:700;text-decoration:none;padding:9px 14px;border-radius:99px;white-space:nowrap}
+.cafe-btn:hover{filter:brightness(1.05)}
+
 /* Contenido de texto */
 .texto{padding-block:8px 40px}
 .texto .wrap > h2{font-size:28px;font-weight:700;margin-bottom:8px}
